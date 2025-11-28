@@ -1,3 +1,7 @@
+## NAME: VISHAL S
+
+## RegisterNumber: 212223240184
+
 # HALF_ADDER_SUBTRACTOR
 
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
@@ -35,6 +39,17 @@ Figure -02 HALF Subtractor
 
 **Truthtable**
 
+**HALF ADDER**
+
+<img width="598" alt="image" src="https://github.com/gauthamkrishna7/HALF_ADDER_SUBTRACTOR/assets/141175025/ee5ace6a-5e24-484b-980e-8cd9bb768c99">
+
+
+**HALF SUBTRACTOR**
+
+<img width="598" alt="image" src="https://github.com/gauthamkrishna7/HALF_ADDER_SUBTRACTOR/assets/141175025/a3b9c6b2-f803-4480-ac4d-3f6e1de988a3">
+
+
+
 **Procedure**
 
 1.	Type the program in Quartus software.
@@ -48,20 +63,37 @@ Figure -02 HALF Subtractor
 5.	For different input combinations generate the timing diagram.
 
 
-# Program:
-
-![WhatsApp Image 2024-11-14 at 13 54 07_9e6cb7c7](https://github.com/user-attachments/assets/d2459bb1-cb99-48d7-be81-b4c108ee45d9)
-
-
-# RTL Schematic :
-
-![WhatsApp Image 2024-11-14 at 13 54 07_8c189040](https://github.com/user-attachments/assets/14dbe29d-bce9-4248-8576-b3a79d3186f2)
-
-# Output/TIMING Waveform
-
-![WhatsApp Image 2024-11-14 at 13 54 07_2f9f904d](https://github.com/user-attachments/assets/a7acaed1-a8e2-4370-8a7d-e4e392250944)
+**Program:**
+```
+/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
 
-# Result:
+*/
+```
 
-Designed a half adder and half subtractor circuit and verified its truth table in Quartus using Verilog programming.
+```py
+module half_add(a,b,sum,carry,D,Bo);
+input a,b;
+output sum,carry,D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
+xor(sum,a,b);
+and(carry,a,b);
+wire abar;
+not(abar,a);
+xor(D,a,b);
+and(Bo,abar,b);
+endmodule
+```
+
+**RTL Schematic**
+
+![image](https://github.com/gauthamkrishna7/HALF_ADDER_SUBTRACTOR/assets/141175025/8bcb44cf-772e-46e9-974a-888c998df9a7)
+
+
+**Output/TIMING Waveform**
+
+![image](https://github.com/gauthamkrishna7/HALF_ADDER_SUBTRACTOR/assets/141175025/f849f9b9-439f-4937-9ea7-920926b8e665)
+
+
+**Result:**
+
+The code is excecuted successfully.
